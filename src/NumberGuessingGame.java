@@ -22,14 +22,14 @@ public class NumberGuessingGame {
         scanner.close();
     }
 
-    private static void guessNumber(Scanner scanner) {
+    static void guessNumber(Scanner scanner) {
         String userName = "";
         while (true) {
             System.out.print("What is your username: ");
             userName = scanner.nextLine();
 
             if (userName.length() < 4 || Pattern.compile("[,.\\/ _]").matcher(userName).find()) {
-                System.out.println("Write a valid user name of more than 4 characters without [',', '.','/','_',' '].");
+                System.out.println("Write a valid user name of more than 4 characters without [',','.','/','_',' '].");
             } else {
                 System.out.println("Valid username");
                 break;
